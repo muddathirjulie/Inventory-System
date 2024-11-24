@@ -113,3 +113,49 @@ button.edit:hover {
     padding: 10px;
   }
 }
+
+.inventory-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+.search-bar {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.search-bar input {
+  padding: 8px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f4f4f4;
+}
+
+table td {
+  background-color: #f9f9f9;
+}
+
+table tr:nth-child(even) td {
+  background-color: #f1f1f1;
+}
