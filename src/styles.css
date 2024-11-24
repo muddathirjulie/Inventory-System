@@ -159,3 +159,29 @@ table td {
 table tr:nth-child(even) td {
   background-color: #f1f1f1;
 }
+
+.add-item-form {
+  margin: 20px 0;
+}
+
+.add-item-form input {
+  padding: 8px;
+  margin: 5px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-item-form button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.add-item-form button:hover {
+  background-color: #45a049;
+}
