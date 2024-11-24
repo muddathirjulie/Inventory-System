@@ -20,8 +20,4 @@ function Home() {
   return <h2>Welcome to the Inventory Management System</h2>;
 }
 
-function Inventory() {
-  return <h2>Inventory Page</h2>;
-}
-
 export default App;
