@@ -1,30 +1,19 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Inventory from './Pages/Inventory';
-import './styles.css'; 
-
+import './styles.css';  // Importing the global styles
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <div>
         <h1>Inventory Management System</h1>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/inventory">Inventory</Link>
-            </li>
-          </ul>
-        </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/inventory" element={<Inventory />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 

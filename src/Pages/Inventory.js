@@ -31,11 +31,11 @@ function Inventory() {
   };
 
   return (
-    <div>
+    <div className="inventory-container">
       <h2>Inventory List</h2>
       <AddInventoryItem addItem={addItem} />
       {editingItem && (
-        <div>
+        <div className="edit-form">
           <h2>Edit Item</h2>
           <form onSubmit={(e) => { e.preventDefault(); saveItem(editingItem); }}>
             <input
@@ -73,8 +73,8 @@ function Inventory() {
               <td>{item.quantity}</td>
               <td>${item.price}</td>
               <td>
-                <button onClick={() => startEditing(item)}>Edit</button>
-                <button onClick={() => deleteItem(item.id)}>Delete</button>
+                <button className="edit" onClick={() => startEditing(item)}>Edit</button>
+                <button className="delete" onClick={() => deleteItem(item.id)}>Delete</button>
               </td>
             </tr>
           ))}

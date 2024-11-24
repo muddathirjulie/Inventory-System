@@ -1,11 +1,57 @@
+/* src/styles.css */
+
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
 }
 
 h1, h2 {
+  color: #333;
   text-align: center;
 }
 
+/* Basic styling for forms */
+form {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="number"],
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Table styling */
 table {
   width: 100%;
   margin-top: 20px;
@@ -13,25 +59,57 @@ table {
 }
 
 th, td {
-  padding: 8px 12px;
-  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
 th {
-  background-color: #f4f4f4;
+  background-color: #f8f8f8;
+  font-weight: bold;
 }
 
-nav {
-  text-align: center;
-  margin-top: 20px;
+tr:hover {
+  background-color: #f1f1f1;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+/* Styling for action buttons (Edit, Delete) */
+button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  font-size: 14px;
 }
 
-li {
-  display: inline;
-  margin: 0 10px;
+button:active {
+  transform: scale(0.98);
+}
+
+button.delete {
+  background-color: #f44336;
+}
+
+button.delete:hover {
+  background-color: #e53935;
+}
+
+button.edit {
+  background-color: #4CAF50;
+}
+
+button.edit:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+
+  input[type="text"], input[type="number"], button {
+    font-size: 14px;
+  }
+
+  .inventory-container {
+    padding: 10px;
+  }
 }
