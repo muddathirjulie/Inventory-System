@@ -1,18 +1,28 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Inventory from './Pages/Inventory';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div>
         <h1>Inventory Management System</h1>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/inventory">Inventory</Link>
+            </li>
+          </ul>
+        </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/inventory" element={<Inventory />} />
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
