@@ -1,126 +1,23 @@
-/* src/styles.css */
-
-/* Reset some default browser styles */
-* {
+/* General Layout */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f7fc;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
-}
-
-h1, h2 {
-  color: #333;
+h1, h2, h3 {
   text-align: center;
-}
-
-/* Basic styling for forms */
-form {
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-input[type="text"],
-input[type="number"],
-button {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-button {
-  background-color: #4CAF50;
-  color: #fff;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-/* Table styling */
-table {
-  width: 100%;
-  margin-top: 20px;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-th {
-  background-color: #f8f8f8;
-  font-weight: bold;
-}
-
-tr:hover {
-  background-color: #f1f1f1;
-}
-
-/* Styling for action buttons (Edit, Delete) */
-button {
-  padding: 5px 10px;
-  margin: 0 5px;
-  font-size: 14px;
-}
-
-button:active {
-  transform: scale(0.98);
-}
-
-button.delete {
-  background-color: #f44336;
-}
-
-button.delete:hover {
-  background-color: #e53935;
-}
-
-button.edit {
-  background-color: #4CAF50;
-}
-
-button.edit:hover {
-  background-color: #45a049;
-}
-
-@media (max-width: 768px) {
-  table {
-    font-size: 14px;
-  }
-
-  input[type="text"], input[type="number"], button {
-    font-size: 14px;
-  }
-
-  .inventory-container {
-    padding: 10px;
-  }
+  color: #333;
 }
 
 .inventory-container {
+  max-width: 900px;
+  margin: 20px auto;
   padding: 20px;
-  font-family: Arial, sans-serif;
-}
-
-h2 {
-  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .search-bar {
@@ -129,59 +26,88 @@ h2 {
 }
 
 .search-bar input {
-  padding: 8px;
-  width: 200px;
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 16px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-table th, table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-table th {
-  background-color: #f4f4f4;
-}
-
-table td {
-  background-color: #f9f9f9;
-}
-
-table tr:nth-child(even) td {
-  background-color: #f1f1f1;
+  margin-bottom: 20px;
 }
 
 .add-item-form {
-  margin: 20px 0;
+  background-color: #e9f5ff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.add-item-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .add-item-form input {
-  padding: 8px;
-  margin: 5px;
-  width: 200px;
+  width: 60%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
 .add-item-form button {
-  padding: 8px 12px;
-  border: none;
-  background-color: #4CAF50;
+  padding: 10px 20px;
+  background-color: #28a745;
   color: white;
+  border: none;
+  border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 4px;
 }
 
 .add-item-form button:hover {
-  background-color: #45a049;
+  background-color: #218838;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #f4f4f9;
+}
+
+td button {
+  padding: 6px 12px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+td button:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 600px) {
+  .search-bar input, .add-item-form input {
+    width: 90%;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
 }
